@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('/assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('/assets/img/favicon.png')}}">
-  <title>
-    PBS UNIDA
-  </title>
+  <title>@yield('title')</title>
+
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -21,6 +20,7 @@
   <link href="{{asset('//assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="{{asset('/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+  @yield('css')
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -44,8 +44,9 @@
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link " href="#">
+          <a class="nav-link " href="/penjadwalan/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
             </div>
@@ -53,7 +54,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/billing.html">
+          <a class="nav-link " href="/mahasiswa/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
             </div>
@@ -61,7 +62,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/billing.html">
+          <a class="nav-link " href="/dosen/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
             </div>
@@ -69,7 +70,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/virtual-reality.html">
+          <a class="nav-link " href="/matakuliah/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-app text-info text-sm opacity-10"></i>
             </div>
@@ -77,7 +78,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="/semester/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
@@ -85,7 +86,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./pages/rtl.html">
+          <a class="nav-link " href="/tahunajar/">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
             </div>
@@ -169,111 +170,16 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container-fluid py-7 ">
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                    <h5 class="font-weight-bolder">
-                       Penjadwalan
-                      </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                      <h5 class="font-weight-bolder">
-                         Mahasiswa
-                        </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                      <h5 class="font-weight-bolder">
-                         Dosen
-                        </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                      <h5 class="font-weight-bolder">
-                         Mata Kuliah
-                        </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                      <h5 class="font-weight-bolder">
-                         Semester
-                        </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm- mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                      <h5 class="font-weight-bolder">
-                         Tahun Ajaran
-                        </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">@yield('title')</h1>
+        @yield('bc')
+    </div>
+<!-- Begin Page Content -->
+<section class="content">
+        @yield('content')
+</section>
 
 
       <footer class="footer pt-3  ">
@@ -468,6 +374,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{asset('/assets/js/argon-dashboard.min.js?v=2.0.4')}}"></script>
+@yield('script')
 </body>
 
 </html>
