@@ -33,25 +33,40 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::middleware(['auth'])->group(function () {
+//data penjadwalan
 Route::get('penjadwalan', [PenjadwalanController::class, 'index']);
 
-
+//data matakuliah
 Route::get('matakuliah', [MataKuliahController::class, 'index']);
 Route::get('/matakuliah/form/', [MataKuliahController::class, 'create']);
+Route::post('/matakuliah/store/', [MataKuliahController::class, 'store']);
+Route::get('/matakuliah/edit/{id}', [MataKuliahController::class, 'edit']);
+Route::put('/matakuliah/{id}', [MataKuliahController::class, 'update']);
+Route::delete('/matakuliah/{id}', [MataKuliahController::class, 'destroy']);
 
-
+//data semester
 Route::get('semester', [SemesterController::class, 'index']);
 Route::get('/semester/form/', [SemesterController::class, 'create']);
 
+//data tahun ajar
 Route::get('tahunajar', [TahunAjarController::class, 'index']);
 Route::get('/tahunajar/form/', [TahunAjarController::class, 'create']);
 
-
+//data dosen
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('/dosen/form/', [DosenController::class, 'create']);
+Route::post('/dosen/store/', [DosenController::class, 'store']);
+Route::get('/dosen/edit/{id}', [DosenController::class, 'edit']);
+Route::put('/dosen/{id}', [DosenController::class, 'update']);
+Route::delete('/dosen/{id}', [DosenController::class, 'destroy']);
 
+//data mahasiswa
 Route::get('mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/mahasiswa/form/', [MahasiswaController::class, 'create']);
-
+Route::post('/mahasiswa/store/', [MahasiswaController::class, 'store']);
+Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
+Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
+});
 
