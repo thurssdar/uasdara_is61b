@@ -17,7 +17,7 @@ class MahasiswaController extends Controller
     public function index()
     {
         $nomor = 1;
-        $mhs = Mahasiswa::all();
+        $mhs = mahasiswa::all();
         return view('mahasiswa.index',compact('nomor','mhs'));
     }
 
@@ -26,8 +26,8 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        $ta = TahunAjar::all();
-        $sm = Semester::all();
+        $ta = tahunajar::all();
+        $sm = semester::all();
         return view('mahasiswa.form',compact('ta','sm'));
     }
 
@@ -36,7 +36,7 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $mhs = new Mahasiswa;
+        $mhs = new mahasiswa;
         $mhs->nim = $request->nim;
         $mhs->nama = $request->nama;
         $mhs->tempat = $request->tempat;

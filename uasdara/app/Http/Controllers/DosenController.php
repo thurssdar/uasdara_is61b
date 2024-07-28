@@ -11,7 +11,7 @@ class DosenController extends Controller
     public function index()
     {
         $nomor = 1;
-        $dsn = Dosen::all();
+        $dsn = dosen::all();
         return view('dosen.index',compact('nomor','dsn'));
     }
 
@@ -20,7 +20,7 @@ class DosenController extends Controller
      */
     public function create()
     {
-        $mk = MataKuliah::all();
+        $mk = matakuliah::all();
         return view('dosen.form',compact('mk'));
     }
 
@@ -29,7 +29,7 @@ class DosenController extends Controller
      */
     public function store(Request $request)
     {
-        $dsn = new Dosen;
+        $dsn = new dosen;
         $dsn->nip = $request->nip;
         $dsn->nama = $request->nama;
         $dsn->matakuliahs_id = $request->matakuliah;
@@ -52,7 +52,7 @@ class DosenController extends Controller
      */
     public function edit(string $id)
     {
-        $dsn = Dosen::find($id);
+        $dsn = dosen::find($id);
         return view('dosen.edit',compact('dsn'));
     }
 

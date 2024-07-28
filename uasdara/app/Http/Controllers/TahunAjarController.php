@@ -10,7 +10,7 @@ class TahunAjarController extends Controller
     public function index()
     {
         $nomor = 1;
-        $ta = TahunAjar::all();
+        $ta = tahunajar::all();
         return view('tahunajar.index',compact('nomor','ta'));
     }
      /**
@@ -26,7 +26,7 @@ class TahunAjarController extends Controller
      */
     public function store(Request $request)
     {
-        $ta = new TahunAjar();
+        $ta = new tahunajar();
         $ta->kode = $request->kode;
         $ta->tahunajar =$request->tahunajar;
         $ta->save();
@@ -56,7 +56,7 @@ class TahunAjarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $ta = TahunAjar::find($id);
+        $ta = tahunajar::find($id);
         $ta->tahunajar = $request->tahunajar;
         $ta->save();
 
@@ -68,7 +68,7 @@ class TahunAjarController extends Controller
      */
     public function destroy(string $id)
     {
-        $ta = TahunAjar::find($id);
+        $ta = tahunajar::find($id);
         $ta->delete();
 
         return redirect('/tahunajar/');

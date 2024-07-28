@@ -10,7 +10,7 @@ class MataKuliahController extends Controller
     public function index()
     {
         $nomor = 1;
-        $mk = MataKuliah::all();
+        $mk = matakuliah::all();
         return view('matakuliah.index',compact('nomor','mk'));
     }
      /**
@@ -26,7 +26,7 @@ class MataKuliahController extends Controller
      */
     public function store(Request $request)
     {
-        $mk = new MataKuliah();
+        $mk = new matakuliah();
         $mk->kode = $request->kode;
         $mk->matakuliah = $request->matakuliah;
         $mk->sks = $request->sks;
@@ -49,7 +49,7 @@ class MataKuliahController extends Controller
      */
     public function edit(string $id)
     {
-        $mk = MataKuliah::find($id);
+        $mk = matakuliah::find($id);
         return view('matakuliah.edit',compact('mk'));
     }
 
@@ -58,7 +58,7 @@ class MataKuliahController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $mk = MataKuliah::find($id);
+        $mk = matakuliah::find($id);
         $mk->matakuliah = $request->matakuliah;
         $mk->sks = $request->sks;
         $mk->save();

@@ -9,7 +9,7 @@ class SemesterController extends Controller
     public function index()
     {
         $nomor = 1;
-        $sm = Semester::all();
+        $sm = semester::all();
         return view('semester.index',compact('nomor','sm'));
     }
      /**
@@ -25,7 +25,7 @@ class SemesterController extends Controller
      */
     public function store(Request $request)
     {
-        $sm = new Semester();
+        $sm = new semester();
         $sm->kode = $request->kode;
         $sm->semester =$request->semester;
         $sm->save();
@@ -55,7 +55,7 @@ class SemesterController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $sm = Semester::find($id);
+        $sm = semester::find($id);
         $sm->semester = $request->semester;
         $sm->save();
 
@@ -67,7 +67,7 @@ class SemesterController extends Controller
      */
     public function destroy(string $id)
     {
-        $sm = Semester::find($id);
+        $sm = semester::find($id);
         $sm->delete();
 
         return redirect('/semester/');

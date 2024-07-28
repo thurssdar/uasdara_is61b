@@ -13,9 +13,9 @@ class PenjadwalanController extends Controller
     public function index()
     {
         $nomor = 1;
-        $pj    = Penjadwalan::all();
+        $pj    = penjadwalan::all();
         return view('penjadwalan.index',compact('nomor','pj'));
     }
 
-   
+
 }
