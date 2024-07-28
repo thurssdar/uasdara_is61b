@@ -8,6 +8,11 @@ use App\Http\Controllers\TahunAjarController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\DosenController;
+use App\Models\Dosen;
+use App\Models\Mahasiswa;
+use App\Models\Semester;
+use App\Models\TahunAjar;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,8 +34,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('penjadwalan', [PenjadwalanController::class, 'index']);
-Route::get('matakuliah', [PenjadwalanController::class, 'index']);
-Route::get('semester', [PenjadwalanController::class, 'index']);
-Route::get('tahunajar', [PenjadwalanController::class, 'index']);
-Route::get('dosen', [PenjadwalanController::class, 'index']);
-Route::get('mahasiswa', [PenjadwalanController::class, 'index']);
+Route::get('matakuliah', [MataKuliahController::class, 'index']);
+Route::get('semester', [SemesterController::class, 'index']);
+Route::get('tahunajar', [TahunAjarController::class, 'index']);
+Route::get('dosen', [DosenController::class, 'index']);
+Route::get('mahasiswa', [MahasiswaController::class, 'index']);
+
+
