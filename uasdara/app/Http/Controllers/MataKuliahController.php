@@ -13,4 +13,67 @@ class MataKuliahController extends Controller
         $mk = MataKuliah::all();
         return view('matakuliah.index',compact('nomor','mk'));
     }
+     /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('matakuliah.form');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $mk = new MataKuliah();
+        $mk->kode = $request->kode;
+        $mk->matakuliah = $request->matakuliah;
+        $mk->sks = $request->sks;
+        $mk->save();
+
+        return redirect('/matakuliah/');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $mk = MataKuliah::find($id);
+        return view('matakuliah.edit',compact('mk'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $mk = MataKuliah::find($id);
+        $mk->matakuliah = $request->matakuliah;
+        $mk->sks = $request->sks;
+        $mk->save();
+
+        return redirect('/matakuliah/');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $mk = MataKuliah::find($id);
+        $mk->delete();
+
+        return redirect('/matakuliah/');
+    }
 }
