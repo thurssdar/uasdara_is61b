@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tahunajars', function (Blueprint $table) {
             $table->id();
             $table->string('kode')->unique();
-            $table->enum('tahunajar', ['23/24', '24/25', '25/26']);
+            $table->string('tahunajar');
             $table->timestamps();
 
         });
