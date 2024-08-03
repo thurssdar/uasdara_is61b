@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('jk');
             $table->string('agama');
-            $table->string('semesters_id');
-            $table->string('tahunajars_id');
+            $table->bigInteger('semesters_id');
+            $table->bigInteger('tahunajars_id');
             $table->string('foto');
             $table->timestamps();
         });
