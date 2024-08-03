@@ -9,5 +9,15 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Mahasiswa extends Model
 {
-    use HasFactory;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'mahasiswas';
+    protected $primaryKey = 'id';
+
+    public function penjadwalans(){
+        return $this->belongTo(Penjadwalan::class,'id','penjadwalans_id');
+    }
 }

@@ -9,5 +9,15 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Dosen extends Model
 {
-    use HasFactory;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'dosens';
+    protected $primaryKey = 'id';
+
+    public function penjadwalans(){
+        return $this->belongTo(Penjadwalan::class);
+    }
 }

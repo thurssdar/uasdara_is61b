@@ -9,5 +9,18 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Semester extends Model
 {
-    use HasFactory;
-}
+/**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'semesters';
+    protected $primaryKey = 'id';
+
+    public function mahasiswas(){
+        return $this->hasOne(Mahasiswa::class,'id','mahasiswas_id');
+    }
+
+    public function penjadwalans(){
+        return $this->hasOne(Penjadwalan::class,'id','penjadwalans_id');
+    }}
