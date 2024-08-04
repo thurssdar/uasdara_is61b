@@ -1,119 +1,23 @@
-@extends('layouts.master')
+@extends('layoutadmin.master')
+
 
 @section('content')
-<div class="card">
-    <ol class="breadcrumb float-sm-left">
-    </ol>
-<div class="card-header">
-    <h3 class="card-title">Dashboard</h3>
+    <div class="card">
+        <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        </ol>
+    <div class="card-header">
+        <h3 class="card-title">Dashboard</h3>
 
-    <div class="card-tools">
-        <div class="container-fluid py-7 ">
-            <div class="row">
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                          <h5 class="font-weight-bolder">
-                             Penjadwalan
-                            </h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                  <div class="card">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                            <h5 class="font-weight-bolder">
-                               Mahasiswa
-                              </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                  <div class="card">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                            <h5 class="font-weight-bolder">
-                               Dosen
-                              </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                  <div class="card">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                            <h5 class="font-weight-bolder">
-                               Mata Kuliah
-                              </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                  <div class="card">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                            <h5 class="font-weight-bolder">
-                               Semester
-                              </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-sm- mb-xl-0 mb-4">
-                  <div class="card">
-                    <div class="card-body p-3">
-                      <div class="row">
-                        <div class="col-8">
-                          <div class="numbers">
-                            <p class="text-sm mb-0 text-uppercase font-weight-bold">Click Here</p>
-                            <h5 class="font-weight-bolder">
-                               Tahun Ajaran
-                              </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+        <div class="card-tools">
 
+        </div>
+        </div>
+        <!-- /.card-footer-->
     </div>
-    </div>
-    <!-- /.card-footer-->
-</div>
-
 @endsection
+
+
 
 {{-- @section('content')
 <div class="container">
