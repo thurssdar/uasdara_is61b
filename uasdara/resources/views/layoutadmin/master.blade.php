@@ -38,7 +38,7 @@
         </div> --}}
         <div class="info">
             <span class="text-secondary" style="font-size: 10px">anda login sebagai,</span>
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
+          {{-- <a href="#" class="d-block">{{Auth::user()->name}}</a> --}}
           <p style="font-size:10px;"><i class="nav-iconfas fa-external-link"></i><a class="text-red" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();"><em>Logout</em></a>

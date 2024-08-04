@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('hari');
             $table->date('tanggal');
             $table->bigInteger('matakuliahs_id');
-            $table->bigInteger('matakuliahs_id');
             $table->bigInteger('dosens_id');
             $table->bigInteger('semesters_id');
             $table->bigInteger('tahunajars_id');

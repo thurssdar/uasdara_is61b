@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-/**
+    /**
      * Display a listing of the resource.
      */
     public function login()
     {
         return view('layoutuser.login');
     }
-    
+
     public function index()
     {
         return view('landingpage',compact(''));
@@ -65,4 +65,5 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
-    }}
+    }
+}
