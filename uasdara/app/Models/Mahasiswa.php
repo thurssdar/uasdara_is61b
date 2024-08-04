@@ -14,6 +14,7 @@ class Mahasiswa extends Model
      *
      * @var string
      */
+    protected $guard = 'mahasiswa';
     protected $table = 'mahasiswas';
     protected $primaryKey = 'id';
 

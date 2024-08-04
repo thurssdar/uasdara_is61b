@@ -26,7 +26,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       {{-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
-      <span class="brand-text font-weight-light">PKBM</span>
+      <span class="brand-text font-weight-light">PBS UNIDA</span>
     </a>
 
     <!-- Sidebar -->
@@ -42,45 +42,19 @@
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-                <a href="/ppdb" class="nav-link">
+                <a href="/home" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/formulir" class="nav-link">
+                <a href="/penjadwalan" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
-                    <p>Formulir</p>
-                    <span class="right badge badge-danger">Wajib</span>
+                    <p>Penjadwalan</p>
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
-                <a href="/upload" class="nav-link">
-                    <i class="nav-icon fas fa-upload"></i>
-                    <p>Upload Berkas</p>
-                </a>
-            </li> --}}
 
-            <li class="nav-item">
-                <a href="/pembayaran" class="nav-link">
-                    <i class="nav-icon fas fa-money-bill"></i>
-                    <p>Pembayaran</p>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a href="/jadwal-ujian" class="nav-link">
-                    <i class="nav-icon fas fa-calendar"></i>
-                    <p>Lihat Jadwal</p>
-                </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/hasil-ujian" class="nav-link">
-                  <i class="nav-icon fas fa-money-bill"></i>
-                  <p>Lihat Hasil</p>
-              </a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn-danger text-center" href="{{ route('logout') }}"

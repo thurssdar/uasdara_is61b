@@ -31,12 +31,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/login-user', [App\Http\Controllers\UserController::class, 'login']);
+Route::post('/login-user', [App\Http\Controllers\UserController::class, 'ceklogin'])->name('login-usser');
+
+Route::middleware('auth:mahasiswa')->group(function () {
+    Route::get('/db-mahasiswa', [App\Http\Controllers\UserController::class, 'index']);
+});
 
 Route::middleware(['auth'])->group(function () {
 //data penjadwalan
 Route::get('penjadwalan', [PenjadwalanController::class, 'index']);
 
+
+Route::middleware(['CekAkses:admin'])->group(function () {
 //data matakuliah
 Route::get('matakuliah', [MataKuliahController::class, 'index']);
 Route::get('/matakuliah/form/', [MataKuliahController::class, 'create']);
@@ -68,5 +78,7 @@ Route::post('/mahasiswa/store/', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
 Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
 Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
+});
+
 });
 
