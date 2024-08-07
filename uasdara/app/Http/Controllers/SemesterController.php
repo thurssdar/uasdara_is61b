@@ -10,14 +10,14 @@ class SemesterController extends Controller
     {
         $nomor = 1;
         $sm = semester::all();
-        return view('semester.index',compact('nomor','sm'));
+        return view('admin.semester.index',compact('nomor','sm'));
     }
      /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('semester.form');
+        return view('admin.semester.form');
     }
 
     /**

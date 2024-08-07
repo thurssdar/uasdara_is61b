@@ -11,14 +11,14 @@ class MataKuliahController extends Controller
     {
         $nomor = 1;
         $mk = matakuliah::all();
-        return view('matakuliah.index',compact('nomor','mk'));
+        return view('admin.matakuliah.index',compact('nomor','mk'));
     }
      /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('matakuliah.form');
+        return view('admin.matakuliah.form');
     }
 
     /**
@@ -50,7 +50,7 @@ class MataKuliahController extends Controller
     public function edit(string $id)
     {
         $mk = matakuliah::find($id);
-        return view('matakuliah.edit',compact('mk'));
+        return view('admin.matakuliah.edit',compact('mk'));
     }
 
     /**

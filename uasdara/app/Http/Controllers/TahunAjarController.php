@@ -11,14 +11,14 @@ class TahunAjarController extends Controller
     {
         $nomor = 1;
         $ta = tahunajar::all();
-        return view('tahunajar.index',compact('nomor','ta'));
+        return view('admin.tahunajar.index',compact('nomor','ta'));
     }
      /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('tahunajar.form');
+        return view('admin.tahunajar.form');
     }
 
     /**

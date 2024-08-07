@@ -12,7 +12,7 @@ class DosenController extends Controller
     {
         $nomor = 1;
         $dsn = dosen::all();
-        return view('dosen.index',compact('nomor','dsn'));
+        return view('admin.dosen.index',compact('nomor','dsn'));
     }
 
     /**
@@ -21,7 +21,7 @@ class DosenController extends Controller
     public function create()
     {
         $mk = matakuliah::all();
-        return view('dosen.form',compact('mk'));
+        return view('admin.dosen.form',compact('mk'));
     }
 
     /**
@@ -53,7 +53,7 @@ class DosenController extends Controller
     public function edit(string $id)
     {
         $dsn = dosen::find($id);
-        return view('dosen.edit',compact('dsn'));
+        return view('admin.dosen.edit',compact('dsn'));
     }
 
     /**

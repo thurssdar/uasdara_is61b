@@ -21,4 +21,10 @@ class Mahasiswa extends Model
     public function penjadwalans(){
         return $this->belongTo(Penjadwalan::class,'id','penjadwalans_id');
     }
+    public function tahunajars(){
+        return $this->hasOne(TahunAjar::class,'id','tahunajars_id');
+    }
+    public function semesters(){
+        return $this->hasOne(Semester::class,'id','semesters_id');
+    }
 }

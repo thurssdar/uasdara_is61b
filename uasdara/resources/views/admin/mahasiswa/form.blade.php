@@ -24,7 +24,7 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="post" action="/mahasiswa/store/">
+            <form method="post" action="/mahasiswa/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">NIM</label>
@@ -54,7 +54,7 @@
                         <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jk id="inlineRadio2" value="Perempuan">
+                        <input class="form-check-input" type="radio" name="jk" id="inlineRadio2" value="Perempuan">
                         <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Pilih Tahun Ajaran</label>
-                    <select name="semester" class="form-control" id="">
+                    <select name="tahunajar" class="form-control" id="">
                         <option value="">-Pilih Tahun Ajaran-</option>
 
                         @foreach ($ta as $item)

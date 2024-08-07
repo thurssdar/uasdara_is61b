@@ -81,7 +81,7 @@
                             <td>{{$nomor++}}</td>
                             <td>{{$item->nip}}</td>
                             <td>{{$item->nama}}</td>
-                            <td>{{$item->matakuliah->kode}} - {{$item->matakuliah->jurusan}}</td>
+                            <td>{{$item->matakuliahs->kode}} - {{$item->matakuliahs->matakuliah}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
@@ -142,11 +142,11 @@
                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Yakin ingin menghapus data jurusan <b>{{$item->dosen}}</b>?
+                                        Yakin ingin menghapus data  <b>{{$item->nama}}</b>?
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                        <form action="/jurusan/{{$item->id}}" method="post">
+                                        <form action="/dosen/{{$item->id}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-primary">Hapus</button>

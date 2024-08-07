@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Semester</label>
-                    <input type="text" class="form-control" name="matakuliah">
+                    <input type="text" class="form-control" name="semester">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Tambah Data</button>

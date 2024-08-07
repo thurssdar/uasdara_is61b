@@ -24,7 +24,7 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="post" action="/semester/store/">
+            <form method="post" action="/tahunajar/store/">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Kode</label>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Tahun Ajaran</label>
-                    <input type="text" class="form-control" name="matakuliah">
+                    <input type="text" class="form-control" name="tahunajar">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Tambah Data</button>

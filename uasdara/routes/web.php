@@ -58,10 +58,12 @@ Route::delete('/matakuliah/{id}', [MataKuliahController::class, 'destroy']);
 //data semester
 Route::get('semester', [SemesterController::class, 'index']);
 Route::get('/semester/form/', [SemesterController::class, 'create']);
+Route::post('/semester/store/', [SemesterController::class, 'store']);
 
 //data tahun ajar
 Route::get('tahunajar', [TahunAjarController::class, 'index']);
 Route::get('/tahunajar/form/', [TahunAjarController::class, 'create']);
+Route::post('/tahunajar/store/', [TahunAjarController::class, 'store']);
 
 //data dosen
 Route::get('dosen', [DosenController::class, 'index']);
@@ -72,7 +74,7 @@ Route::put('/dosen/{id}', [DosenController::class, 'update']);
 Route::delete('/dosen/{id}', [DosenController::class, 'destroy']);
 
 //data mahasiswa
-Route::get('mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/mahasiswa/form/', [MahasiswaController::class, 'create']);
 Route::post('/mahasiswa/store/', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);

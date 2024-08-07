@@ -18,7 +18,7 @@ class MahasiswaController extends Controller
     {
         $nomor = 1;
         $mhs = mahasiswa::all();
-        return view('mahasiswa.index',compact('nomor','mhs'));
+        return view('admin.mahasiswa.index',compact('nomor','mhs'));
     }
 
     /**
@@ -28,7 +28,7 @@ class MahasiswaController extends Controller
     {
         $ta = tahunajar::all();
         $sm = semester::all();
-        return view('mahasiswa.form',compact('ta','sm'));
+        return view('admin.mahasiswa.form',compact('ta','sm'));
     }
 
     /**
@@ -36,6 +36,15 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request,[
+        //     'nim' => 'required|unique:mahasiswas,nim',
+        //     'nama' => 'required',
+        //     'foto' => 'required|max:10000|image',
+        // ],[
+        //     'required' => ':attribute Harus Diisi',
+        //     'unique' => ':attribute sudah pernah digunakan, silakan pilih :attribute lain',
+        // ]);
+
         $mhs = new mahasiswa;
         $mhs->nim = $request->nim;
         $mhs->nama = $request->nama;
@@ -68,7 +77,7 @@ class MahasiswaController extends Controller
     public function edit(string $id)
     {
         $mhs = Mahasiswa::find($id);
-        return view('mahasiswa.edit',compact('mhs'));
+        return view('admin.mahasiswa.edit',compact('mhs'));
     }
 
     /**

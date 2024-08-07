@@ -1,6 +1,6 @@
-@extends('layoutadmin.master')
+@extends('layouts.master')
 
-
+@yield('')
 @section('content')
     <div class="card">
         <ol class="breadcrumb float-sm-left">

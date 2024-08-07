@@ -24,7 +24,7 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="post" action="/dosen/store/">
+            <form method="post" action="/matakuliah/store/">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Kode</label>

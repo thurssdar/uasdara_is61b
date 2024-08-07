@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data Dosen')
-@section('judul','Data Dosen')
+@section('title','Data Mata Kuliah')
+@section('judul','Data Mata Kuliah')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data Dosen</li>
+        <li class="breadcrumb-item active">Data Mata Kuliah</li>
     </ol>
 @endsection
 
@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/doen/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        <a href="/matakuliah/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -127,7 +127,7 @@
                                     </div>
                                 </div>
 
-                                <a href="/dosen/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                                <a href="/matakuliah/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
 
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>

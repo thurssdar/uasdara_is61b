@@ -20,4 +20,8 @@ class Dosen extends Model
     public function penjadwalans(){
         return $this->belongTo(Penjadwalan::class);
     }
+    public function matakuliahs(){
+        return $this->hasOne(MataKuliah::class,'id','matakuliahs_id');
+    }
+
 }
