@@ -16,11 +16,11 @@
   @yield('css')
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini  ">
 <!-- Site wrapper -->
-<div class="wrapper">
+<div class="wrapper ">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-lightblue navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -164,17 +164,17 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-light-warning elevation-4 ">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    <a href="/" class="brand-link">
+      <img src="../../dist/img/pbs.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">PBS UNIDA</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar ">
       <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
         <div class="image">
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
@@ -183,15 +183,14 @@
         </div>
       </div>
 
-      <
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-2 ">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -202,7 +201,7 @@
 
           <li class="nav-item">
             <a href="/penjadwalan/" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+                <i class="nav-icon fas fa-duotone fa-solid fa-calendar-minus"></i>
               <p>
                 Penjadwalan
               </p>
@@ -211,7 +210,7 @@
 
           <li class="nav-item">
             <a href="/mahasiswa/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+                <i class="nav-icon fas fa-duotone fa-solid fa-user-graduate"></i>
               <p>
                 Mahasiswa
               </p>
@@ -220,7 +219,7 @@
 
           <li class="nav-item">
             <a href="/dosen/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+                <i class="nav-icon fas fa-solid fa-user-tie"></i>
               <p>
                 Dosen
               </p>
@@ -229,7 +228,7 @@
 
           <li class="nav-item">
             <a href="/matakuliah/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+              <i class="nav-icon fas fa-sharp fa-solid fa-book"></i>
               <p>
                 Mata Kuliah
               </p>
@@ -238,7 +237,7 @@
 
           <li class="nav-item">
             <a href="/semester/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+                <i class="nav-icon fas fa-solid fa-file"></i>
               <p>
                 Semester
               </p>
@@ -247,7 +246,7 @@
 
           <li class="nav-item">
             <a href="/tahunajar/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+                <i class="nav-icon fas fa-sharp-duotone fa-solid fa-clipboard"></i>
               <p>
                 Tahun Ajaran
               </p>
@@ -298,7 +297,7 @@
   </footer>
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->

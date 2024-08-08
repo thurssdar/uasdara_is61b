@@ -44,7 +44,8 @@ Route::middleware('auth:mahasiswa')->group(function () {
 Route::middleware(['auth'])->group(function () {
 //data penjadwalan
 Route::get('penjadwalan', [PenjadwalanController::class, 'index']);
-
+Route::get('/penjadwalan/form/', [PenjadwalanController::class, 'create']);
+Route::post('/penjadwalan/store/', [PenjadwalanController::class, 'store']);
 
 Route::middleware(['CekAkses:admin'])->group(function () {
 //data matakuliah
