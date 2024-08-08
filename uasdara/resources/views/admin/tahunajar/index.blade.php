@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/tahunajar/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        <a href="/tahunajar/form/" class="btn btn-warning"><i class="fa fa-plus"></i> Tambah Data</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -66,7 +66,7 @@
         </div>
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
-                <thead>
+                <thead class="bg-lightblue text-white">
                     <tr>
                         <th>Nomor</th>
                         <th>Kode</th>
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
 
-                                {{-- <a href="/semester/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a> --}}
+                            
 
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>

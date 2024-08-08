@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/mahasiswa/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        <a href="/mahasiswa/form/" class="btn btn-warning"><i class="fa fa-plus"></i> Tambah Data</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -66,7 +66,7 @@
         </div>
         <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
-                <thead>
+                <thead class="bg-lightblue text-white">
                     <tr>
                         <th>Nomor</th>
                         <th>NIM</th>

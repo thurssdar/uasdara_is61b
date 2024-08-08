@@ -44,14 +44,11 @@ class PenjadwalanController extends Controller
 
         $pj = new penjadwalan;
         $pj->kode = $request->kode;
-        $pj->mahasiswas_id = $request->nim;
-        $pj->mahasiswas_id = $request->nama;
+        $pj->mahasiswas_id = $request->mahasiswa;
         $pj->hari = $request->hari;
         $pj->tanggal = $request->tanggal;
         $pj->matakuliahs_id = $request->matakuliah;
-        $pj->matakuliahs_id = $request->sks;
-        $pj->dosens_id = $request->nip;
-        $pj->dosens_id = $request->nama;
+        $pj->dosens_id = $request->dosen;
         $pj->semesters_id = $request->semester;
         $pj->tahunajars_id = $request->tahunajar;
         $pj->save();
