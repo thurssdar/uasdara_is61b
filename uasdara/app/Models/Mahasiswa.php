@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Mahasiswa extends Model
+
+class Mahasiswa extends Authenticatable
 {
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    use HasFactory, Notifiable;
+
     protected $guard = 'mahasiswa';
     protected $table = 'mahasiswas';
     protected $primaryKey = 'id';

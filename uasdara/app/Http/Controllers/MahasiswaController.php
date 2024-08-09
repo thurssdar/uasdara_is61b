@@ -8,6 +8,7 @@ use App\Models\Jurusan;
 use App\Models\MataKuliah;
 use App\Models\Semester;
 use App\Models\TahunAjar;
+use Illuminate\Support\Facades\Hash;
 
 class MahasiswaController extends Controller
 {
@@ -17,8 +18,8 @@ class MahasiswaController extends Controller
     public function index()
     {
         $nomor = 1;
-        $mhs = mahasiswa::all();
-        return view('admin.mahasiswa.index',compact('nomor','mhs'));
+        $mhs = Mahasiswa::all();
+        return view('admin.mahasiswa.index', compact('nomor', 'mhs'));
     }
 
     /**
@@ -26,9 +27,9 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        $ta = tahunajar::all();
-        $sm = semester::all();
-        return view('admin.mahasiswa.form',compact('ta','sm'));
+        $ta = TahunAjar::all();
+        $sm = Semester::all();
+        return view('admin.mahasiswa.form', compact('ta', 'sm'));
     }
 
     /**
@@ -36,16 +37,16 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'nim' => 'required|unique:mahasiswas,nim',
             'nama' => 'required',
             'foto' => 'required|max:10000|image',
-        ],[
+        ], [
             'required' => ':attribute Harus Diisi',
             'unique' => ':attribute sudah pernah digunakan, silakan pilih :attribute lain',
         ]);
 
-        $mhs = new mahasiswa;
+        $mhs = new Mahasiswa;
         $mhs->nim = $request->nim;
         $mhs->nama = $request->nama;
         $mhs->tempat = $request->tempat;
@@ -55,13 +56,13 @@ class MahasiswaController extends Controller
         $mhs->agama = $request->agama;
         $mhs->semesters_id = $request->semester;
         $mhs->tahunajars_id = $request->tahunajar;
-        $mhs->password = bcrypt($request->password);
+        $mhs->password = Hash::make($request->password); // Enkripsi password
         $mhs->foto = $request->foto->getClientOriginalName();
         $mhs->save();
 
-        $request->foto->move('foto',$request->foto->getClientOriginalName());
+        $request->foto->move('foto', $request->foto->getClientOriginalName());
 
-        return redirect('/mahasiswa/');
+        return redirect('/mahasiswa/')->with('success', 'Data mahasiswa berhasil disimpan');
     }
 
     /**
@@ -69,7 +70,7 @@ class MahasiswaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // Logic untuk menampilkan detail mahasiswa jika diperlukan
     }
 
     /**
@@ -78,7 +79,7 @@ class MahasiswaController extends Controller
     public function edit(string $id)
     {
         $mhs = Mahasiswa::find($id);
-        return view('admin.mahasiswa.edit',compact('mhs'));
+        return view('admin.mahasiswa.edit', compact('mhs'));
     }
 
     /**
@@ -86,6 +87,12 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $this->validate($request, [
+            'nim' => 'required|unique:mahasiswas,nim,' . $id,
+            'nama' => 'required',
+            'foto' => 'sometimes|max:10000|image',
+        ]);
+
         $mhs = Mahasiswa::find($id);
         $mhs->nim = $request->nim;
         $mhs->nama = $request->nama;
@@ -96,12 +103,21 @@ class MahasiswaController extends Controller
         $mhs->agama = $request->agama;
         $mhs->semesters_id = $request->semester;
         $mhs->tahunajars_id = $request->tahunajar;
-        $mhs->foto = $request->foto->getClientOriginalName();
+
+        // Jika password diisi, lakukan update dengan enkripsi
+        if ($request->password) {
+            $mhs->password = Hash::make($request->password);
+        }
+
+        // Update foto jika ada file baru
+        if ($request->hasFile('foto')) {
+            $mhs->foto = $request->foto->getClientOriginalName();
+            $request->foto->move('foto', $request->foto->getClientOriginalName());
+        }
+
         $mhs->save();
 
-        $request->foto->move('foto',$request->foto->getClientOriginalName());
-
-        return redirect('/mahasiswa/');
+        return redirect('/mahasiswa/')->with('success', 'Data mahasiswa berhasil diperbarui');
     }
 
     /**
@@ -112,6 +128,6 @@ class MahasiswaController extends Controller
         $mhs = Mahasiswa::find($id);
         $mhs->delete();
 
-        return redirect('/mahasiswa/');
+        return redirect('/mahasiswa/')->with('success', 'Data mahasiswa berhasil dihapus');
     }
 }

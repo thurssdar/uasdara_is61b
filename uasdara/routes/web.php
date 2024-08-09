@@ -8,11 +8,7 @@ use App\Http\Controllers\TahunAjarController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\DosenController;
-use App\Models\Dosen;
-use App\Models\Mahasiswa;
-use App\Models\MataKuliah;
-use App\Models\Semester;
-use App\Models\TahunAjar;
+use App\Http\Controllers\MhsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,8 +30,10 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/login-user', [App\Http\Controllers\UserController::class, 'login']);
-Route::post('/login-user', [App\Http\Controllers\UserController::class, 'ceklogin'])->name('login-user');
+Route::get('/login-user', [App\Http\Controllers\MhsController::class, 'login']);
+
+Route::get('/login-user', [App\Http\Controllers\MhsController::class, 'login']);
+Route::post('/login-user', [App\Http\Controllers\MhsController::class, 'ceklogin'])->name('login-user');
 
 Route::middleware('auth:mahasiswa')->group(function () {
     Route::get('/db-mahasiswa', [App\Http\Controllers\UserController::class, 'index']);
@@ -46,6 +44,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('penjadwalan', [PenjadwalanController::class, 'index']);
 Route::get('/penjadwalan/form/', [PenjadwalanController::class, 'create']);
 Route::post('/penjadwalan/store/', [PenjadwalanController::class, 'store']);
+Route::get('/penjadwalan/edit/{id}', [PenjadwalanController::class, 'edit']);
 
 Route::middleware(['CekAkses:admin'])->group(function () {
 //data matakuliah

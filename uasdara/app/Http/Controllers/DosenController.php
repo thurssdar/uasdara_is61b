@@ -52,8 +52,9 @@ class DosenController extends Controller
      */
     public function edit(string $id)
     {
-        $dsn = dosen::find($id);
-        return view('admin.dosen.edit',compact('dsn'));
+        $mk = MataKuliah::find($id);
+        $dsn = Dosen::find($id);
+        return view('admin.dosen.edit',compact('mk','dsn'));
     }
 
     /**
@@ -61,6 +62,7 @@ class DosenController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
         $dsn = Dosen::find($id);
         $dsn->nip = $request->nip;
         $dsn->nama = $request->nama;

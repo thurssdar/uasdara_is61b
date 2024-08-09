@@ -23,6 +23,7 @@ return new class extends Migration
             $table->bigInteger('semesters_id');
             $table->bigInteger('tahunajars_id');
             $table->string('foto');
+            $table->string('password');
             $table->timestamps();
         });
     }

@@ -36,19 +36,16 @@
                     <input type="text" value="{{$dsn->nama}}" class="form-control" name="nama">
                 </div>
 
-                {{-- <div class="mb-3">
-                    <label class="form-label">Mata Ajar</label>
-                    <input type="text" value="{{$dsn->mataajars_id}}" class="form-control" name="nama">
-                </div> --}}
                 <div class="mb-3">
-                    <label class="form-label">Mata Ajar</label>
-                    <select name="matakuliah" class="form-control" id="">
-                        <option value="">-Pilih Mata Ajar-</option>
-
+                    <label class="form-label">Pilih Mata Ajar</label>
+                    <select name="matakuliah" class="form-control">
+                        <option value="">-Mata Ajar-</option>
                         @foreach ($mk as $item)
-                            <option value="{{$item->id}}">{{$item->matakuliah}}</option>
-                        @endforeach
+                        <option value="{{$item->id}}" {{ $item->id == $dsn->matakuliahs_id ? 'selected' : '' }}>
+                            {{$item->matakuliah}}
+                        </option>
 
+                        @endforeach
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Edit Data</button>

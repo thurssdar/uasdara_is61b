@@ -18,7 +18,7 @@ class Dosen extends Model
     protected $primaryKey = 'id';
 
     public function penjadwalans(){
-        return $this->belongTo(Penjadwalan::class);
+        return $this->belongsTo(Penjadwalan::class);
     }
     public function matakuliahs(){
         return $this->hasOne(MataKuliah::class,'id','matakuliahs_id');
