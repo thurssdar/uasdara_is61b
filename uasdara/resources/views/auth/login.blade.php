@@ -16,10 +16,12 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <div class="login-logo">
-    {{-- <a href="../../index2.html"><b>Admin</b>Login</a> --}}
-    <p>Admin Login</p>
-  </div>
+    <div class="login-logo">
+        <div class="text-center">
+            <img src="../../dist/img/pbs.png" class="rounded"  width= "170px" height= "170px" alt="..." >
+          </div>
+        <b>Login</b> Admin</a>
+      </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">

@@ -35,7 +35,7 @@
                     <input type="text" class="form-control" name="nama">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Mata Ajar</label>
+                    {{-- <label class="form-label">Mata Ajar</label>
                     <select name="matakuliah" class="form-control" id="">
                         <option value="">-Pilih Mata Ajar-</option>
 
@@ -43,6 +43,13 @@
                             <option value="{{$item->id}}">{{$item->matakuliah}}</option>
                         @endforeach
 
+                    </select> --}}
+
+                    <label for="access_level">Mata Ajar</label>
+                    <select name="matakuliah" id="matakuliah">
+                        @foreach ($mk as $item)
+                        <option value="1" <?php echo ($access == 1) ? 'selected' : ''; ?>>1</option>
+                        @endforeach
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>

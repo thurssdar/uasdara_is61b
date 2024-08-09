@@ -56,12 +56,12 @@
         <a href="/semester/form/" class="btn btn-warning"><i class="fa fa-plus"></i> Tambah Data</a>
 
         <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            {{-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-minus"></i>
             </button>
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
             <i class="fas fa-times"></i>
-            </button>
+            </button> --}}
         </div>
         </div>
         <div class="card-body">
@@ -84,7 +84,7 @@
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
                                 </button>
-
+{{--
                                 <!-- Modal Detail-->
                                 <div class="modal fade" id="detail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -110,8 +110,8 @@
                                                             <td>Foto</td>
                                                             <th scope="row"><img src="{{ asset('/foto/'.$item->foto) }}" width="100" alt=""></th>
                                                         </tr> --}}
-                                                </tbody>
-                                            </table>
+                                                {{-- </tbody> --}}
+                                            {{-- </table>
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -119,9 +119,9 @@
                                         </div>
                                     </div>
                                     </div>
-                                </div>
+                                </div>  --}}
 
-                                
+
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>
                                 </button>

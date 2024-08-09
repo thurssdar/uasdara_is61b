@@ -29,12 +29,17 @@
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">NIP</label>
-                    <input type="text" readonly value="{{$jur->nip}}" class="form-control" name="nip">
+                    <input type="text" readonly value="{{$dsn->nip}}" class="form-control" name="nip">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama</label>
                     <input type="text" value="{{$dsn->nama}}" class="form-control" name="nama">
                 </div>
+
+                {{-- <div class="mb-3">
+                    <label class="form-label">Mata Ajar</label>
+                    <input type="text" value="{{$dsn->mataajars_id}}" class="form-control" name="nama">
+                </div> --}}
                 <div class="mb-3">
                     <label class="form-label">Mata Ajar</label>
                     <select name="matakuliah" class="form-control" id="">
