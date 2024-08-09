@@ -30,13 +30,11 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/login-user', [App\Http\Controllers\MhsController::class, 'login']);
-
-Route::get('/login-user', [App\Http\Controllers\MhsController::class, 'login']);
+Route::get('login-user', [App\Http\Controllers\MhsController::class, 'login']);
 Route::post('/login-user', [App\Http\Controllers\MhsController::class, 'ceklogin'])->name('login-user');
 
 Route::middleware('auth:mahasiswa')->group(function () {
-    Route::get('/db-mahasiswa', [App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/db-mahasiswa', [App\Http\Controllers\MhsController::class, 'index']);
 });
 
 Route::middleware(['auth'])->group(function () {

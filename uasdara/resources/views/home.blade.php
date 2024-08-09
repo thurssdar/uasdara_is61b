@@ -85,9 +85,6 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Penjadwalan</p>
-                          <h5 class="font-weight-bolder">
-                            $53,000
-                          </h5>
                         </div>
                       </div>
                       <div class="col-4 text-end">
@@ -106,9 +103,6 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Mahasiswa</p>
-                          <h5 class="font-weight-bolder">
-                            2,300
-                          </h5>
                         </div>
                       </div>
                       <div class="col-4 text-end">
@@ -127,9 +121,6 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Dosen</p>
-                          <h5 class="font-weight-bolder">
-                            +3,462
-                          </h5>
                         </div>
                       </div>
                       <div class="col-4 text-end">
@@ -156,9 +147,7 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Mata Kuliah</p>
-                          <h5 class="font-weight-bolder">
-                            $53,000
-                          </h5>
+
                         </div>
                       </div>
                       <div class="col-4 text-end">
@@ -177,9 +166,6 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Semester</p>
-                          <h5 class="font-weight-bolder">
-                            2,300
-                          </h5>
                         </div>
                       </div>
                       <div class="col-4 text-end">
@@ -198,9 +184,6 @@
                       <div class="col-8">
                         <div class="numbers">
                           <p class="text-sm mb-0 text-uppercase font-weight-bold">Tahun Ajaran</p>
-                          <h5 class="font-weight-bolder">
-                            +3,462
-                          </h5>
                         </div>
                       </div>
                       <div class="col-4 text-end">
