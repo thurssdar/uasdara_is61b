@@ -76,129 +76,85 @@
                 </div><!--/. container-fluid -->
               </section>
         </div> --}}
-        <div class="container-fluid py-3 ">
+        <div class="container-fluid ">
             <div class="row">
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-lightblue">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Penjadwalan</p>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                          <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Penjadwalan</p>
                   </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-warning text-white">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Mahasiswa</p>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                          <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
                   </div>
+                  <a href="/penjadwalan/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-lightblue">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Dosen</p>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                          <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
-
-
-
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Mahasiswa</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="/mahasiswa/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Dosen</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="/dosen/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            </div>
         </div>
         <div class="container-fluid py-4">
             <div class="row">
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card  bg-warning">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Mata Kuliah</p>
-
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                          <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Mata Kuliah</p>
                   </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-lightblue">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Semester</p>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                          <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
                   </div>
+                  <a href="/matakuliah/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card bg-warning">
-                  <div class="card-body p-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="numbers">
-                          <p class="text-sm mb-0 text-uppercase font-weight-bold">Tahun Ajaran</p>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end">
-                        <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                          <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-
-
-
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Semester</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="/semester/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                  <div class="inner">
+                    <p>Tahun Ajaran</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="/tahunajaran/" class="small-box-footer bg-lightblue">Click Here <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 @endsection
